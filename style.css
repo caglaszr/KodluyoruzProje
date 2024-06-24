@@ -95,7 +95,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   color: rgb(37, 148, 52);
   text-decoration: none;
 }
@@ -161,3 +161,26 @@ nav a:hover {
 }
 
 /* NAVBAR END */
+
+/* HAKKIMIZDA START */
+.container .card-title {
+  color: rgb(37, 148, 52);
+}
+
+.container .card-text {
+  color: rgb(82, 78, 78);
+}
+
+.about-section .card {
+  background-color: #faf9f9;
+}
+
+.about-section {
+  margin-bottom: 50px;
+}
+.about-title {
+  text-align: center;
+  color: #827c7c;
+  margin-bottom: 30px;
+}
+/* HAKKIMIZDA END */

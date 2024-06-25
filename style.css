@@ -305,15 +305,19 @@ nav a:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-@media (max-width: 768px) {
-  .container .blog-card {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 30px;
+@media only screen and (max-width: 768px) {
+  .card-content {
+    flex-direction: column; /* Mobilde dikey sıralama */
+    align-items: center; /* Kartları ortala */
   }
 
-  .blog-card .content {
-    padding: 15px 20px;
+  .container .blog-card {
+    width: 100%; /* Tam genişlik */
+  }
+
+  .container .blog-card:hover .imgBox {
+    transform: scale(1);
+    box-shadow: none;
   }
 }
 /* blog end */
@@ -321,7 +325,7 @@ nav a:hover {
 /* project start */
 
 .project-container {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 .project-container .project-title {
   text-align: center;
@@ -353,14 +357,17 @@ nav a:hover {
 
 .footer .footer-links {
   display: flex;
-  justify-content: center; /* Linkleri dikey olarak hizala */
-  align-items: center; /* Linkleri sol tarafta hizala */
+  justify-content: center;
+  align-items: center;
   margin: 20px;
   gap: 20px;
 }
+.footer .footer-link:hover {
+  opacity: 0.7;
+}
 
 .footer .footer-link {
-  margin: 5px 0; /* Her bir link arasına boşluk bırak */
+  margin: 5px 0;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -378,11 +385,10 @@ nav a:hover {
   height: 60px;
   width: 60px;
   margin: 0 5px;
-  background: #fff;
+  background: rgb(220, 218, 218);
   overflow: hidden;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-out;
 }
 
@@ -455,6 +461,43 @@ nav a:hover {
 
 .footer-policy {
   text-align: center;
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .footer .footer-links {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .footer .social-buttons {
+    margin-top: 10px;
+  }
+
+  .social-button {
+    width: 60px;
+  }
+
+  .social-button:hover {
+    width: 60px;
+  }
+
+  .social-button .icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .social-button span {
+    display: none;
+  }
 }
 
 /* footer end */

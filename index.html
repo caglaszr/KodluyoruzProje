@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
 </head>
 <body>
       <!-- VİDEO START -->
   
   <div id="video-container">
     <video id="fullscreen-video" autoplay muted>
-        <source src="44370-438662051_small.mp4" type="video/mp4">
+        <source src="50278-460295808_tiny.mp4" type="video/mp4">
     </video>
     <div class="container">
-    <h1 class="video-text">SÜRDÜRÜLEBİLİR GELECEK İÇİN <br> <span>HAREKETE GEÇ</span></h1>
+    <h1 class="video-text">SÜRDÜRÜLEBİLİR GELECEK İÇİN <br> <span>HAREKETE GEÇ !</span></h1>
     <a id="discovery" href="#logo">TOPLULUĞU KEŞFET</a>
   </div>
 </div> 
@@ -24,25 +25,56 @@
 
     
 <!-- NAVBAR START -->
-<div class="container">
-    <nav>
-        <div id="logo" class="logo">
-            <a href="#"><img src="logo.png" alt="Logo">SÜRDÜRÜLEBİLİR <br> GELECEK TOPLULUĞU</a>
-        </div>
-        <div class="toggle">
-            <a href="#">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-        </div>
-        <ul class="menu">
-            <li><a href="#">ANASAYFA</a></li>
+<header>
+  <nav class="navbar">
+      <span class="hamburger-btn material-symbols-rounded">menu</span>
+      <a href="#" class="logo" id="logo">
+          <img src="logo.png" alt="logo">
+          <h2>SÜRDÜRÜLEBİLİR <br> GELECEK TOPLULUĞU</h2>
+      </a>
+      <ul class="links">
+          <span class="close-btn material-symbols-rounded">close</span>
+            <li><a href="#home">ANASAYFA</a></li>
             <li><a href="#about">HAKKIMIZDA</a></li>
             <li><a href="#blog">BLOG</a></li>
             <li><a href="#proje">PROJELERİMİZ</a></li>
             <li><a href="#contact">İLETİŞİM</a></li>
-        </ul>
-    </nav>
+      </ul>
+      <button class="join-btn"><span></span>BİZE KATIL</button>
+  </nav>
+</header>
+<div class="blur-bg-overlay"></div>
+<div class="form-popup">
+  <span class="close-btn material-symbols-rounded">X</span>
+  <div class="form-box join">
+      <div class="form-details">
+          <h2>TOPLULUĞA HOŞGELDİNİZ</h2>
+          <p>Sürdürülebilir bir gelecek için topluluğumuza katıl! <br> Başvuru sürecinden sonra en kısa sürede sana dönüş yapacağız</p>
+      </div>
+      <div class="form-content">
+          <h2 style="color: rgb(23, 127, 37);">TOPLULUĞA KATIL</h2>
+          <form action="#">
+              <div class="input-field">
+                  <input type="text" required placeholder="Adınız"> 
+              </div>
+              <div class="input-field">
+                  <input type="text" required placeholder="Soyadınız">
+              </div>
+              <div class="input-field">
+                <input type="email" required placeholder="E-mailiniz">
+            </div>
+            <div class="input-field">
+              <input type="number" required placeholder="Telefon Numaranız">
+          </div>
+              <button id="apply" type="submit">BAŞVUR</button>
+          </form>
+      </div>
   </div>
+</div>
+
+  <!-- modal -->
+
+  
 <!-- NAVBAR END -->
 
 
@@ -115,7 +147,7 @@
     <div class="content">
       <h2>GERİ DÖNÜŞÜM</h2>
       <p>Geri dönüşüm, atık malzemelerin yeniden işlenerek kullanıma kazandırılması sürecidir. Doğal kaynakları korur, enerji tasarrufu sağlar ve çevre kirliliğini azaltır.</p>
-      <a href="#">DAHA FAZLA OKU</a>
+      <a href="blog2.html">DAHA FAZLA OKU</a>
 
     </div>
   </div>
@@ -126,7 +158,7 @@
     <div class="content">
       <h2>SU KAYNAKLARI</h2>
       <p>Su kaynakları, dünya üzerindeki tatlı ve tuzlu su rezervleridir. İnsan yaşamı, tarım ve sanayi için hayati öneme sahiptir.</p>
-      <a href="#">DAHA FAZLA OKU</a>
+      <a href="blog3.html">DAHA FAZLA OKU</a>
       
     </div>
   </div>
@@ -229,6 +261,6 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybM6dNg1GylF217z4P/chOfsc1XJbIqTVa2xN/q1piQK7XuG1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-oBqDVmMz4fnFO9gybM6dNg1GylF217z4P/chOfsc1XJbIqTVa2xN/q1piQK7XuG1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -8,9 +8,10 @@ const showPopupBtn = document.querySelector(".join-btn");
 const formPopup = document.querySelector(".form-popup");
 const hidePopupBtn = formPopup.querySelector(".close-btn");
 const applyButton = document.getElementById("apply");
+const inputs = document.querySelectorAll("#myForm input");
 
 
-
+// NAVBAR
 
 hamburgerBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("show-menu");
@@ -23,9 +24,22 @@ showPopupBtn.addEventListener("click", () => {
 
 hidePopupBtn.addEventListener("click", () => showPopupBtn.click());
 
-applyButton.addEventListener("click",()=>{
-  alert("Başvurunuz alınmıştır");
+applyButton.addEventListener("click", () => {
+  let allFilled = true;
+
+  inputs.forEach(input => {
+      if (!input.value) {
+          allFilled = false;
+      }
+  });
+
+  if (allFilled) {
+      alert("Başvurunuz alınmıştır");
+  } else {
+      alert("Lütfen tüm alanları doldurun.");
+  }
 });
+
 
 //Video üstündeki yazı animasyon 
 document.addEventListener('DOMContentLoaded', function() {

@@ -90,8 +90,8 @@ header {
   left: 0;
   z-index: 10;
   padding: 0 50px;
-  border-bottom: 3px solid rgb(37, 148, 52);
-  margin-bottom: 50px;
+  border-bottom: 2px solid rgb(37, 148, 52);
+  margin-bottom: 80px;
 }
 .navbar {
   display: flex;
@@ -137,7 +137,6 @@ header {
 }
 .navbar .links a {
   color: rgb(82, 78, 78);
-
   font-size: 1.1rem;
   font-weight: 500;
   text-decoration: none;
@@ -145,11 +144,12 @@ header {
 }
 .navbar .links a:hover {
   color: rgb(37, 148, 52);
-  transition: 0.4s ease all;
+  font-weight: 500;
+  border-bottom: 2px solid;
 }
 
 .join-btn {
-  top: -10px;
+  top: -5px;
   background-color: rgb(65, 156, 77);
   border: none;
   color: white;
@@ -162,27 +162,6 @@ header {
   margin-left: 30px;
 }
 
-.join-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(23, 127, 37);
-  transition: left 0.5s ease;
-  z-index: 0;
-}
-
-.join-btn:hover::before {
-  left: 0;
-}
-
-.join-btn span {
-  position: relative;
-  z-index: 1;
-}
-
 .form-popup {
   position: fixed;
   top: 50%;
@@ -191,7 +170,7 @@ header {
   width: 100%;
   opacity: 0;
   pointer-events: none;
-  max-width: 720px;
+  max-width: 800px;
   background: #fff;
   transform: translate(-50%, -70%);
 }
@@ -203,12 +182,13 @@ header {
 }
 .form-popup .close-btn {
   position: absolute;
+  font-size: 14px;
   top: 12px;
   right: 12px;
-  color: #878484;
+  color: rgb(23, 127, 37);
   cursor: pointer;
 }
-.blur-bg-overlay {
+.blur-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -218,10 +198,9 @@ header {
   opacity: 0;
   pointer-events: none;
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   transition: 0.1s ease;
 }
-.show-popup .blur-bg-overlay {
+.show-popup .blur-overlay {
   opacity: 1;
   pointer-events: auto;
 }
@@ -231,23 +210,26 @@ header {
 .form-box .form-details {
   width: 100%;
   color: #fff;
-  max-width: 330px;
+  max-width: 400px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
-.join .form-details {
+.form-box .form-details {
   padding: 0 40px;
-  background: url("sukaynagı2.jpg");
+  background: url("images/northern-lights-3242090_1280.jpg");
   background-position: center;
   background-size: cover;
+  opacity: 0.9;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .form-box .form-content {
   width: 100%;
   padding: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .form-box h2 {
   text-align: center;
@@ -294,6 +276,11 @@ form button:hover {
   text-align: center;
 }
 
+.form-content .apply-exp {
+  font-size: 14px;
+  color: #666;
+}
+
 @media (max-width: 1200px) {
   .navbar :is(.hamburger-btn, .close-btn) {
     display: block;
@@ -332,6 +319,7 @@ form button:hover {
   }
   .navbar .links a:hover {
     color: rgb(23, 127, 37);
+    border-bottom: none;
   }
   .navbar .join-btn {
     top: 5px;
